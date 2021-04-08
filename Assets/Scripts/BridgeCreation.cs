@@ -6,9 +6,12 @@ public class BridgeCreation : MonoBehaviour
 {
     void Update()
     {
-        if (Input.touchCount > 0)
+        bool playerTouchesScreen = Input.touchCount > 0;
+
+        if (playerTouchesScreen)
         {
-            Touch touch = Input.GetTouch(0);
+            
         }
     }
+
 }

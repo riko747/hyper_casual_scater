@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Shootable
   - Obstacle
+  - BridgeShards
   layers:
   - Default
   - TransparentFX
