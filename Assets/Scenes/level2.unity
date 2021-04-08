@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 81f714daf7144784b8a2f42f1cd30927, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ceb0a3ed2cb53a94fa21843cc958c52b, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.04356935, g: 0.044956096, b: 0.059190933, a: 1}
+  m_IndirectSpecularColor: {r: 0.12078878, g: 0.1756266, b: 0.25907445, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 55f0b376774056543a85024c4eea9dd9,
+  m_LightingDataAsset: {fileID: 112000000, guid: 96918f90d5792f44ba8d1cd62cfed4bc,
     type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
@@ -914,7 +914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0.07820132, y: 0.32493713, z: -0.026950413, w: -0.9421115}
-  m_LocalPosition: {x: 1.216078, y: 1.8197262, z: -11.939201}
+  m_LocalPosition: {x: 3.0401947, y: 2.3143156, z: -14.269004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1253,7 +1253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483251299}
   m_LocalRotation: {x: -0.07820132, y: 0.32493713, z: -0.026950413, w: -0.9421115}
-  m_LocalPosition: {x: 1.216078, y: 1.8197262, z: -11.939201}
+  m_LocalPosition: {x: 3.0401947, y: 2.3143156, z: -14.269004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1902073779}
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.5
-  m_CameraDistance: 2
+  m_CameraDistance: 5
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_DeadZoneDepth: 0
@@ -2346,6 +2346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bridgeShard: {fileID: 0}
+  bridgeShardList: []
+  bridgeShardNewPosition: []
   playerOnGround: 0
   playerOnFinish: 0
   playerAlive: 0

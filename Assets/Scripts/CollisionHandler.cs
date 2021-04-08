@@ -10,8 +10,8 @@ public class CollisionHandler : MonoBehaviour
 
     Vector3 playerBackpackPosition;
 
-    List<GameObject> bridgeShardList = new List<GameObject>();
-    List<Vector3> bridgeShardNewPosition = new List<Vector3>();
+    public List<GameObject> bridgeShardList = new List<GameObject>();
+    public List<Vector3> bridgeShardNewPosition = new List<Vector3>();
     LevelManagement levelManagementScript;
 
     public bool playerOnGround;
