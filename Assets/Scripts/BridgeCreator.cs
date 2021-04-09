@@ -14,7 +14,6 @@ public class BridgeCreator : MonoBehaviour
 
     float playerPositionOnY;
 
-    int backpackHeight;
     void Start()
     {
         bridgeCollector = GameObject.FindWithTag("Player").GetComponent<BridgeCollector>();
@@ -22,10 +21,9 @@ public class BridgeCreator : MonoBehaviour
 
     void Update()
     {
-        bridgeShardList = bridgeCollector.bridgeShardList;
-        backpackHeight = bridgeCollector.backPackHeight;
+        bridgeShardList = bridgeCollector.BridgeShardList;
         playerOnGround = GameObject.FindWithTag("Player").GetComponent<CollisionHandler>().playerOnGround;
-        playerPositionOnY = transform.position.y;
+        playerPositionOnY = transform.localPosition.y;
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -34,12 +32,11 @@ public class BridgeCreator : MonoBehaviour
             {
                 if (bridgeShardList.Count - 1 >= 0 && !playerOnGround)
                 {
-                    bridgeShardCopy = Instantiate(bridgeShardList[bridgeShardList.Count - 1], new Vector3(transform.position.x, playerPositionOnY + (touch.position.y - Screen.width / 2) / 1500, transform.position.z + 0.6f), Quaternion.Euler(transform.localRotation.x - (touch.position.y - Screen.width / 2) / 1500, transform.localRotation.y, transform.localRotation.z));
+                    bridgeShardCopy = Instantiate(bridgeShardList[bridgeShardList.Count - 1], new Vector3(transform.localPosition.x, playerPositionOnY + (touch.position.y - Screen.width / 2) / 1500, transform.localPosition.z + 0.6f), Quaternion.Euler(transform.localRotation.x - (touch.position.y - Screen.width / 2) / 1500, transform.localRotation.y, transform.localRotation.z));
                     bridgeShardCopy.transform.localScale = new Vector3(0.5f, 0.05f, 0.5f);
                     bridgeShardCopy.GetComponent<Collider>().isTrigger = false;
                     Destroy(bridgeShardList[bridgeShardList.Count - 1]);
                     bridgeShardList.RemoveAt(bridgeShardList.Count - 1);
-                    backpackHeight -= 1;
                 }
                 else
                     return;

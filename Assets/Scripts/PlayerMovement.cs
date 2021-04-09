@@ -12,13 +12,11 @@ public class PlayerMovement : MonoBehaviour
 
     float speed;
 
-
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
     }
 
-    
 
     void Update()
     {

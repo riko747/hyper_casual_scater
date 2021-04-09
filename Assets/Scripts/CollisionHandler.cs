@@ -5,21 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
+    AudioSource audioSource;
+    [SerializeField] AudioClip winSound;
+    [SerializeField] AudioClip loseSound;
     LevelManagement levelManagementScript;
-    GameObject finishPad;
 
     public bool playerOnGround;
     public bool playerOnFinish;
     public bool playerAlive;
     public bool playerOnBridge;
+    bool playerIsTranscending;
 
     [SerializeField] ParticleSystem[] winParticles;
 
     void Start()
     {
-        playerOnFinish = false;
         levelManagementScript = Camera.main.GetComponent<LevelManagement>();
-        finishPad = GameObject.FindWithTag("Finish");
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnCollisionStay(Collision collision)
@@ -28,6 +30,7 @@ public class CollisionHandler : MonoBehaviour
             playerOnGround = true;
         if (collision.gameObject.tag == "BridgeShards")
             playerOnBridge = true;
+            
     }
 
     void OnCollisionEnter(Collision collision)
@@ -35,15 +38,26 @@ public class CollisionHandler : MonoBehaviour
         if (collision.gameObject.tag == "Finish")
         {
             playerOnFinish = true;
-            levelManagementScript.Invoke("LoadNextLevel", 1f);
+            audioSource.Stop();
+            audioSource.PlayOneShot(winSound);
             foreach (ParticleSystem winParticle in winParticles)
                 winParticle.Play();
+            levelManagementScript.Invoke("LoadNextLevel", 1f);
+            
         }
         if (collision.gameObject.tag == "Obstacle")
         {
-            Destroy(gameObject);
-            levelManagementScript.Invoke("RestartLevel", 1f);
+            playerIsTranscending = true;
+            audioSource.Stop();
+            audioSource.PlayOneShot(loseSound);
+            Invoke("PrepareToRestart", 1f);
         }
+    }
+
+    void PrepareToRestart()
+    {
+        Destroy(gameObject);
+        levelManagementScript.Invoke("RestartLevel", 1f);
     }
 
     void OnCollisionExit(Collision collision)
