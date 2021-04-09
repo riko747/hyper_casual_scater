@@ -192,9 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bridgeShard: {fileID: 3451730980235224122, guid: 08dc23f055c95df429b79d3d5b1ca7ed,
     type: 3}
-  bridgeShardList: []
-  bridgeShardNewPosition: []
-  backPackHeight: 0
 --- !u!114 &1873360724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,14 +312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca7cea0e68005c46a46a24a292c413e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winParticles:
+  - {fileID: 0}
+  - {fileID: 0}
   winSound: {fileID: 8300000, guid: c0d3550be3f226f4badbe69cd356ffb6, type: 3}
   loseSound: {fileID: 8300000, guid: 4500534fd43c4124bb360cf0c5bbe796, type: 3}
-  ridingScate: {fileID: 8300000, guid: 497014c8679281049a7364b94e7b77a8, type: 3}
-  playerOnGround: 0
-  playerOnFinish: 0
-  playerAlive: 0
-  playerOnBridge: 0
-  winParticles: []
 --- !u!65 &782775138
 BoxCollider:
   m_ObjectHideFlags: 0

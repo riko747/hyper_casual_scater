@@ -3983,6 +3983,16 @@ PrefabInstance:
       propertyPath: winParticles.Array.data[1]
       value: 
       objectReference: {fileID: 300194616}
+    - target: {fileID: 1228124967177857327, guid: fc9200237515c994c8def5208dcf7520,
+        type: 3}
+      propertyPath: winParticles.Array.data[0]
+      value: 
+      objectReference: {fileID: 160296596}
+    - target: {fileID: 1228124967177857327, guid: fc9200237515c994c8def5208dcf7520,
+        type: 3}
+      propertyPath: winParticles.Array.data[1]
+      value: 
+      objectReference: {fileID: 300194616}
     - target: {fileID: 1228124968852978704, guid: fc9200237515c994c8def5208dcf7520,
         type: 3}
       propertyPath: m_Name

@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The script is responsible for collecting bridge blocks
+/// </summary>
 public class BridgeCollector : MonoBehaviour
 {
     #region Fields
@@ -75,7 +78,7 @@ public class BridgeCollector : MonoBehaviour
         }
     }
 
-    //Picks up a block of bridge pieces and moves it to backpack
+    //Picks up a block of bridge pieces and teleports it to backpack
     void PickupABlockOfBridgePieces(Collider other)
     {
         Destroy(other.gameObject);

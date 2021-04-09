@@ -1,38 +1,86 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Script is responsible for player movement
+/// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    #region Fields
     [SerializeField] CollisionHandler collisionHandler;
-    Rigidbody rigidBody;
-    bool playerOnGround;
-    bool playerOnFinish;
-    bool playerOnBridge;
+    
+    private Rigidbody rigidBody;
+
+    private float speedOnGround = 1000;
+    private float speedOnBridge = 2000;
+    private float speedOnFly = 600;
+
+    private bool playerOnGround;
+    private bool playerOnBridge;
 
     float speed;
+    #endregion
 
+    #region Properties
+    public Rigidbody Rigidbody
+    {
+        get { return rigidBody; }
+        set { rigidBody = value; }
+    }
+    public float SpeedOnGround
+    {
+        get { return speedOnGround; }
+        set { speedOnGround = value; }
+    }
+    public float SpeedOnBridge
+    {
+        get { return speedOnBridge; }
+        set { speedOnBridge = value; }
+    }
+    public float SpeedOnFly
+    {
+        get { return speedOnFly; }
+        set { speedOnFly = value; }
+    }
+    public bool PlayerOnGround
+    {
+        get { return playerOnGround; }
+        set { playerOnGround = value; }
+    }
+    public bool PlayerOnBridge
+    {
+        get { return playerOnBridge; }
+        set { playerOnBridge = value; }
+    }
+    #endregion
+
+    #region Methods
     void Start()
     {
-        rigidBody = GetComponent<Rigidbody>();
+        Rigidbody = GetComponent<Rigidbody>();
     }
 
 
     void Update()
     {
-        playerOnGround = collisionHandler.playerOnGround;
-        playerOnFinish = collisionHandler.playerOnFinish;
-        playerOnBridge = collisionHandler.playerOnBridge;
+        PlayerOnGround = collisionHandler.PlayerOnGround;
+        PlayerOnBridge = collisionHandler.PlayerOnBridge;
     }
 
     void FixedUpdate()
     {
-        if (playerOnGround)
-            speed = 1000;
-        if (playerOnBridge)
-            speed = 2000;
-        else if (!playerOnGround)
-            speed = 600;
-        rigidBody.AddRelativeForce(Vector3.forward * speed * Time.deltaTime, ForceMode.Force);
+        SetSpeed();
+        Rigidbody.AddRelativeForce(Vector3.forward * speed * Time.deltaTime, ForceMode.Force);
     }
+
+    void SetSpeed()
+    {
+        if (PlayerOnGround)
+            speed = SpeedOnGround;
+        else if (PlayerOnBridge)
+            speed = SpeedOnBridge;
+        else if (!PlayerOnGround && !playerOnBridge)
+            speed = SpeedOnFly;
+    }
+    #endregion
 }
