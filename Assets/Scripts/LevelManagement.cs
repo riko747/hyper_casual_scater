@@ -29,4 +29,9 @@ public class LevelManagement : MonoBehaviour
         Destroy(player);
         SceneManager.LoadScene(currentSceneIndex);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

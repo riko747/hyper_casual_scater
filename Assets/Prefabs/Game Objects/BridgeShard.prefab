@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4043754341861375823}
   - component: {fileID: 3017246012426483551}
   - component: {fileID: 7474037134382580922}
-  - component: {fileID: 7896167950076359009}
+  - component: {fileID: -919495613905430827}
   m_Layer: 0
   m_Name: BridgeShard
-  m_TagString: Untagged
+  m_TagString: BridgeShard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3451730980235224122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1680001, z: 0}
+  m_LocalPosition: {x: 0.0000071313334, y: 16.511423, z: -3.944609}
   m_LocalScale: {x: 0.5, y: 0.05, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7896167950076359009
+--- !u!65 &-919495613905430827
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

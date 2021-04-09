@@ -66,7 +66,7 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
-  androidUseSwappy: 0
+  androidUseSwappy: 1
   androidBlitType: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
@@ -85,7 +85,7 @@ PlayerSettings:
   resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
-  gpuSkinning: 0
+  gpuSkinning: 1
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -146,7 +146,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Company.ProductName
+    Android: com.DefaultCompany.HyperCasualScater
     Standalone: unity.DefaultCompany.FPS2
     Tizen: com.Company.ProductName
     iPhone: com.Company.ProductName
@@ -269,7 +269,99 @@ PlayerSettings:
       m_Width: 128
       m_Height: 128
       m_Kind: 0
-  m_BuildTargetPlatformIcons: []
+  m_BuildTargetPlatformIcons:
+  - m_BuildTarget: Android
+    m_Icons:
+    - m_Textures: []
+      m_Width: 432
+      m_Height: 432
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 324
+      m_Height: 324
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 216
+      m_Height: 216
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 162
+      m_Height: 162
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 108
+      m_Height: 108
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 81
+      m_Height: 81
+      m_Kind: 2
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 192
+      m_Height: 192
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 96
+      m_Height: 96
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 48
+      m_Height: 48
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 36
+      m_Height: 36
+      m_Kind: 0
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 192
+      m_Height: 192
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 144
+      m_Height: 144
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 96
+      m_Height: 96
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 72
+      m_Height: 72
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 48
+      m_Height: 48
+      m_Kind: 1
+      m_SubKind: 
+    - m_Textures: []
+      m_Width: 36
+      m_Height: 36
+      m_Kind: 1
+      m_SubKind: 
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: MacStandaloneSupport
@@ -310,6 +402,9 @@ PlayerSettings:
   - m_BuildTarget: iOSSupport
     m_APIs: 10000000
     m_Automatic: 1
+  - m_BuildTarget: AndroidPlayer
+    m_APIs: 0b000000
+    m_Automatic: 0
   m_BuildTargetVRSettings:
   - m_BuildTarget: Android
     m_Enabled: 0
@@ -370,6 +465,7 @@ PlayerSettings:
   openGLRequireES32: 0
   m_TemplateCustomTags: {}
   mobileMTRendering:
+    Android: 1
     iPhone: 1
     tvOS: 1
   m_BuildTargetGroupLightmapEncodingQuality:
@@ -379,8 +475,12 @@ PlayerSettings:
     m_EncodingQuality: 1
   - m_BuildTarget: PS4
     m_EncodingQuality: 1
+  - m_BuildTarget: Android
+    m_EncodingQuality: 1
   m_BuildTargetGroupLightmapSettings: []
-  m_BuildTargetNormalMapEncoding: []
+  m_BuildTargetNormalMapEncoding:
+  - m_BuildTarget: Android
+    m_Encoding: 1
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1

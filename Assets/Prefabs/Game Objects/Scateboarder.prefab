@@ -90,7 +90,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125844768}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -108,6 +108,8 @@ GameObject:
   - component: {fileID: 1228124968852978797}
   - component: {fileID: 1228124968852978796}
   - component: {fileID: 1911350922}
+  - component: {fileID: 990479415}
+  - component: {fileID: 1873360724}
   m_Layer: 0
   m_Name: Scateboarder
   m_TagString: Player
@@ -144,8 +146,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6413207, y: 0.15054202, z: 0.8610239}
-  m_Center: {x: 0.037886202, y: -0.06979406, z: 0.015667439}
+  m_Size: {x: 0.29913056, y: 0.15054202, z: 0.8610239}
+  m_Center: {x: -0.003107369, y: -0.06979406, z: 0.015667439}
 --- !u!54 &1228124968852978797
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -190,9 +192,39 @@ MonoBehaviour:
   playerOnGround: 0
   playerOnFinish: 0
   playerAlive: 0
+  playerOnBridge: 0
   winParticles:
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &990479415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228124968852978704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34175f7082617a046a105b0843aedc69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bridgeShard: {fileID: 3451730980235224122, guid: 08dc23f055c95df429b79d3d5b1ca7ed,
+    type: 3}
+  bridgeShardList: []
+  bridgeShardNewPosition: []
+  backPackHeight: 0
+--- !u!114 &1873360724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228124968852978704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0031d89a04499554e9ed095bf27c9bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1228124967215143485
 PrefabInstance:
   m_ObjectHideFlags: 0

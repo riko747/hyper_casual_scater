@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rigidBody;
     bool playerOnGround;
     bool playerOnFinish;
+    bool playerOnBridge;
 
     float speed;
 
@@ -23,14 +24,17 @@ public class PlayerMovement : MonoBehaviour
     {
         playerOnGround = collisionHandler.playerOnGround;
         playerOnFinish = collisionHandler.playerOnFinish;
+        playerOnBridge = collisionHandler.playerOnBridge;
     }
 
     void FixedUpdate()
     {
         if (playerOnGround)
             speed = 1000;
+        if (playerOnBridge)
+            speed = 2000;
         else if (!playerOnGround)
             speed = 600;
-        rigidBody.AddRelativeForce(Vector3.forward * speed * Time.fixedDeltaTime, ForceMode.Force);
+        rigidBody.AddRelativeForce(Vector3.forward * speed * Time.deltaTime, ForceMode.Force);
     }
 }
